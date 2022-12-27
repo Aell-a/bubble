@@ -45,6 +45,10 @@ export const getDefaultProfile = gql`
           }
         }
       }
+      stats {
+        totalFollowers
+        totalFollowing
+      }
     }
   }
 `;
