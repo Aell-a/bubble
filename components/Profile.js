@@ -17,6 +17,7 @@ export default function ProfileBox() {
       <div className="border-solid border-indigo-700 border-8 rounded-xl h-50 w-50 p-5">
         <div className="flex flex-col items-center">
           <img
+            alt="profile-image"
             src={imageURL}
             className="h-64 w-64 rounded-3xl border-2 border-black"
           />

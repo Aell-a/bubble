@@ -5,6 +5,7 @@ export default function Box(props) {
     <div className="w-72 h-120 border-4 bg-indigo-400 border-gray-800 rounded-md mx-auto my-auto text-center">
       <a href={props.url}>
         <Image
+          alt="box-image"
           className="border-b-2 border-gray-800"
           src={`/${props.image}.png`}
           width={440}

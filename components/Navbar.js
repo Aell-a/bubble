@@ -27,7 +27,11 @@ export default function Navbar() {
           <div>Welcome to Bubble {profile.name}</div>
           <Link href={`/profiles/${profile.id}`}>
             {profile.picture && (
-              <img className="h-12 w-12 ml-2" src={imageURL} />
+              <img
+                className="h-12 w-12 ml-2"
+                src={imageURL}
+                alt="profile-img"
+              />
             )}
             {!profile.picture && <User fontSize="50px" />}
           </Link>
@@ -43,7 +47,7 @@ export default function Navbar() {
       <ul className="list-none m-0 p-0 flex items-center justify-between h-full">
         <li className="rounded">
           <Link href="/">
-            <Image className="rounded-t-lg" src={logo} width={256} />
+            <Image className="rounded-t-lg" src={logo} width={256} alt="logo" />
           </Link>
         </li>
         <li>{loginMessage()}</li>
