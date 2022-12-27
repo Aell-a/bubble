@@ -12,7 +12,9 @@ export default function Navbar() {
 
   function loginMessage() {
     if (account && !profile) {
-      return <div>You don't have a lens profile</div>;
+      return (
+        <div className="text-gray-200">You need a Lens profile to login</div>
+      );
     }
     if (account && profile) {
       let imageURL;
