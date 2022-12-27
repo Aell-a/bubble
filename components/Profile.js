@@ -1,6 +1,7 @@
 import { useLensContext } from "../context/LensContext";
 import Link from "next/link";
 import { useMoralis } from "react-moralis";
+import Image from "next/image";
 
 export default function ProfileBox() {
   const { account } = useMoralis();
@@ -16,7 +17,7 @@ export default function ProfileBox() {
     <div className="bg-indigo-100 h-screen flex flex-col basis-2 items-center justify-center">
       <div className="border-solid border-indigo-700 border-8 rounded-xl h-50 w-50 p-5">
         <div className="flex flex-col items-center">
-          <img
+          <Image
             alt="profile-image"
             src={imageURL}
             className="h-64 w-64 rounded-3xl border-2 border-black"

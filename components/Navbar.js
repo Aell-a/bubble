@@ -27,10 +27,13 @@ export default function Navbar() {
           <div>Welcome to Bubble {profile.name}</div>
           <Link href={`/profiles/${profile.id}`}>
             {profile.picture && (
-              <img
+              <Image
                 className="h-12 w-12 ml-2"
                 src={imageURL}
                 alt="profile-img"
+                width={256}
+                height={256}
+                quality={100}
               />
             )}
             {!profile.picture && <User fontSize="50px" />}
@@ -45,9 +48,16 @@ export default function Navbar() {
   return (
     <nav className="pt-2 pb-2 pr-10 pl-10 w-full bg-black fixed top-0 p-0 font-bold border-b-2 border-solid border-indigo-700 z-99">
       <ul className="list-none m-0 p-0 flex items-center justify-between h-full">
-        <li className="rounded">
+        <li>
           <Link href="/">
-            <Image className="rounded-t-lg" src={logo} width={256} alt="logo" />
+            <Image
+              className="rounded-t-lg h-95 w-256"
+              src={logo}
+              width={256}
+              height={380}
+              quality={100}
+              alt="logo"
+            />
           </Link>
         </li>
         <li>{loginMessage()}</li>
