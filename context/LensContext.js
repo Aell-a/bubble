@@ -51,7 +51,7 @@ export function LensProvider({ children }) {
     }
   };
 
-  const getProfile = async function () {
+  const getMyProfile = async function () {
     const defaultProfile = await apolloClient.query({
       query: getDefaultProfile,
       variables: {
@@ -80,7 +80,7 @@ export function LensProvider({ children }) {
       window.localStorage.removeItem("lensToken");
     }
     if (account) {
-      getProfile().then((profile) => setProfile(profile));
+      getMyProfile().then((profile) => setProfile(profile));
     }
   }, [account]);
 
